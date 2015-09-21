@@ -34,8 +34,12 @@
   $(function() {
     $.ajax({
     url: 'http://ann4321.github.io/test/main.html',
-    success: function(){
-      alert('Load was performed.');
+    success: function(data, second){
+      console.log(arguments);
+      console.log(data);
+      console.log(second);
+
+      $('.main-content').html(data);
         }
     });
   });
